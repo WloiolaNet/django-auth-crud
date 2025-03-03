@@ -15,7 +15,7 @@
                 {{form}}
                 <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
                 <button class="btn btn-primary">
-                 Atualizar Tarefa
+                 Atualizar
                 </button>
             </form>
            
@@ -23,13 +23,13 @@
             <form action="{% url 'complete_task' task.id %}" method="POST" >
                 {% csrf_token %}    
                 <button class="btn btn-secondary">
-                Tarefa Completada
+                Completar
                 </button>
             </form>
             <form action="{% url 'delete_task' task.id %}" method="POST" >
                 {% csrf_token %}    
                 <button class="btn btn-danger">
-                Apagar Tarefa
+                Apagar
                 </button>
             </form>
            </div>

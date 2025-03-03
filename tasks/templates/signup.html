@@ -13,35 +13,29 @@
                     <i class="bi bi-exclamation-triangle-fill me-2"></i>
                     {{ error }}
                 </div>
-                {% endif %}
-                          
-               
+                {% endif %} 
+
                 {% csrf_token %}
                 
                 <div class="mb-3">
                     <label for="username">Nome:</label>
                     <input type="text" name="username" id="username"
-                    class="form-control" placeholder="Digite seu Nome">
-
+                    class="form-control" placeholder="Digite seu Nome" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="password1">Senha:</label>
                     <input type="password" name="password1" id="password1"
-                    class="form-control" placeholder="Digite sua Senha">
-
+                    class="form-control" placeholder="Digite sua Senha" required autocomplete="off">
                 </div>
-
+                
                 <div class="mb-3">
                     <label for="password2">Confirme sua Senha:</label>
                     <input type="password" name="password2" id="password2"
-                    class="form-control" placeholder="Confirme sua Senha">
-
+                    class="form-control" placeholder="Confirme sua Senha" required autocomplete="off">
                 </div>
-
-
-                <button class="btn btn-primary">
-                    Cadastra-se
+                <button class="btn btn-primary w-100">
+                    Cadastre-se
                 </button>
             </form>
         </div>

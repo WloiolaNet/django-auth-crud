@@ -30,6 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 DEBUG = 'RENDER' not in os.environ
 
 #APPEND_SLASH = False
+#ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['django-auth-crud-huzk.onrender.com']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:

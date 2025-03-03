@@ -31,12 +31,12 @@ def signup(request):
             except IntegrityError:
                 return render(request,'signup.html',{
                 'form': UserCreationForm,
-                "error" : 'Username already exists'
+                "error" : 'O nome de usuário já existe!'
                 })
         else:
              return render(request,'signup.html',{
                 'form': UserCreationForm,
-                "error" : 'Password do not match'
+                "error" : 'A senha não corresponde!'
                 })
 @login_required          
 def tasks(request):
@@ -46,12 +46,12 @@ def tasks(request):
     # Após carregar a página, reseta a sessão para evitar que fique sempre como "Tasks Completed"
     # request.session['last_action'] = None  
     # return render(request,'tasks.html',{'tasks': tasks, 'title': title})
-    return render(request,'tasks.html',{'tasks': tasks,'title': "Tasks Pending"})
+    return render(request,'tasks.html',{'tasks': tasks,'title': "Tarefas pendentes"})
 
 @login_required
 def tasks_completed(request):
     tasks = Task.objects.filter(user=request.user, datecompleted__isnull=False).order_by('-datecompleted')
-    return render(request,'tasks.html',{'tasks': tasks,'title': "Tasks Completed"})
+    return render(request,'tasks.html',{'tasks': tasks,'title': "Tarefas concluídas"})
 
 @login_required
 def create_task(request):
@@ -67,7 +67,7 @@ def create_task(request):
             new_task.save()
             return redirect('tasks')
         except ValueError:
-            return render(request,'create_task.html',{'form': TaskForm, 'error':'Please provide valida data'})
+            return render(request,'create_task.html',{'form': TaskForm, 'error':'Forneça dados válidos!'})
         
 @login_required
 def task_detail(request, task_id):
@@ -83,7 +83,7 @@ def task_detail(request, task_id):
             return redirect('tasks')
         except ValueError:
             return render(request, 'task_detail.html',{'task': task, 'form': form,
-            'error': "Error updating task"})
+            'error': "Erro ao atualizar a tarefa!"})
 
 @login_required        
 def complete_task(request, task_id):
@@ -118,7 +118,7 @@ def signin(request):
         if user is None:
             return render(request,'signin.html',{
                 'form': AuthenticationForm,
-                'error': 'Username  or password is incorrect'
+                'error': 'Nome de usuário ou senha estão incorretos!'
             })
         else:
             login(request,user)

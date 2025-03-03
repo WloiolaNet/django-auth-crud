@@ -6,7 +6,9 @@
         <div class="col-md-4 offset-md-4 mt-5">
             <form action="/signin/" method="POST" class="card card-body">
                 <h1 class="text-center">Formulário de Login</h1>
-                {{error}}
+                <div class= "alert alert-primary" role="alert">
+                    {{error}}
+                <div>               
                 {% csrf_token %}
                 
                 <div class="mb-3">

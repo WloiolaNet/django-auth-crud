@@ -7,9 +7,13 @@
         <div class="col-md-4 offset-md-4 mt-5">
             <form method="POST" class="card card-body">
                 <h1 class="text-center">Criar uma conta</h1>
-                <div class= "alert alert-danger" role="alert">
-                    {{error}}
-                </div>
+                
+                {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                    </div>
+                {% endif %}
+                          
                
                 {% csrf_token %}
                 

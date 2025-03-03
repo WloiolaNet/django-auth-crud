@@ -6,7 +6,11 @@ class TaskForm(forms.ModelForm):
         model= Task
         fields=['title','description','important']
         widgets ={
-            'title': forms.TextInput(attrs={'class':'form-control','placeholder':'Write a title'}),
-            'description': forms.Textarea(attrs={'class':'form-control','placeholder':'Write a description'}),
+            'title': forms.TextInput(attrs={'class':'form-control','placeholder':'Digite um Título'}),
+            'description': forms.Textarea(attrs={'class':'form-control','placeholder':'Digite uma Descrição'}),
             'important': forms.CheckboxInput(attrs={'class':'form-check-input'}),
         }
+        labels = {
+            'title': 'Título',
+            'description': 'Descrição',
+            'important': 'Importante',}

@@ -18,15 +18,14 @@
                 {% csrf_token %}
                 
                 <div class="mb-3">
-                    <label for="username" class="form-label">Usuário:</label>
+                    <label for="username">Usuário:</label>
                     <div class="input-group">
                         <span class="input-group-text">
-                            <i class="bi bi-person-fill"></i>
-                            <input type="text" name="username" id="username"
-                            class="form-control" placeholder="Digite seu Nome">
+                            <i class="bi bi-person-fill"></i>                            
                         </span>
                     </div>
-                   
+                    <input type="text" name="username" id="username"
+                    class="form-control" placeholder="Digite seu Nome">
                 </div>            
                            
                 <div class="mb-3">

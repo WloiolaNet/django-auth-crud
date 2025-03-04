@@ -28,28 +28,27 @@
                 {% endif %}   
 
                 {% if user.is_authenticated %}
-                <li class="nav-item">
-                    
+                <li class="nav-item">                    
                     <a href="{% url 'tasks' %}" class="nav-link d-flex align-items-center"><i class="bi bi-list-check me-2"></i>Tarefas pendentes</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'tasks_completed' %}" class="nav-link d-flex align-items-center"><i class="bi bi-check-circle me-2"></i>Tarefas concluídas</a>
                 </li> 
                 <li class="nav-item">
-                    <a href="/tasks/create/" class="nav-link">Criar tarefa</a>
+                    <a href="/tasks/create/" class="nav-link d-flex align-items-center"><i class="bi bi-plus-circle me-2"></i>Criar tarefa</a>
                 </li>                 
                 <li class="nav-item">
-                    <a href="/logout" class="nav-link">Sair</a>
+                    <a href="/logout" class="nav-link d-flex align-items-center"><i class="bi bi-box-arrow-right me-2"></i>Sair</a>
                 </li>                
                 {% else %}
                 <li class="nav-item">
-                    <a href="/signin" class="nav-link">Conecte-se</a>
+                    <a href="/signin" class="nav-link d-flex align-items-center"><i class="bi bi-box-arrow-in-right me-2"></i>Conecte-se</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/signup" class="nav-link">Cadastre-se</a>
+                    <a href="/signup" class="nav-link d-flex align-items-center"><i class="bi bi-person-plus me-2"></i>Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
+                    <a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-info-circle me-2"></i>Sobre</a>
                 </li>
                 {% endif %}           
             </ul>

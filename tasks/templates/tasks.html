@@ -24,8 +24,15 @@
                         {% endif %}  
                         <p>{{task.user.username}}</p>
                     </header>
-                    <p>{{task.description}}</p>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-info-circle me-2"></i>
+                        <p>{{task.description}}</p>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-clock me-2"></i>
                     <p>{{task.datecompleted|date:'M d Y, h:i A'}}</p> 
+                    </div>
                 </a>
                 {% endfor %}
             </ul>

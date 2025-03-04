@@ -17,10 +17,16 @@
                 {% for task in tasks %}
                 <a class="list-group-item" href="{% url 'task_detail' task.id %}">
                     <header class="d-flex justify-content-between">
-                        {% if task.important %}   
-                        <h1 class="fw-bold text-success">{{task.title}}</h1>
+                        {% if task.important %} 
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-file-earmark-text me-2"></i>
+                            <h1 class="fw-bold text-success">{{task.title}}</h1>
+                        </div>                       
                         {% else %}
-                        <h1 class="fw-bold"> {{task.title}}</h1>                       
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-file-earmark-text me-2"></i>
+                            <h1 class="fw-bold"> {{task.title}}</h1>  
+                        </div>                        
                         {% endif %}  
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-person-fill me-2"></i>

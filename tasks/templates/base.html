@@ -30,10 +30,10 @@
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     
-                    <a href="{% url 'tasks' %}" class="nav-link" class="nav-link d-flex align-items-center"><i class="bi bi-list-check text-white me-2"></i>Tarefas pendentes</a>
+                    <a href="{% url 'tasks' %}" class="nav-link d-flex align-items-center"><i class="bi bi-list-check me-2"></i>Tarefas pendentes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'tasks_completed' %}" class="nav-link" class="nav-link d-flex align-items-center"><i class="bi bi-check-circle text-white me-2"></i>Tarefas concluídas</a>
+                    <a href="{% url 'tasks_completed' %}" class="nav-link d-flex align-items-center"><i class="bi bi-check-circle me-2"></i>Tarefas concluídas</a>
                 </li> 
                 <li class="nav-item">
                     <a href="/tasks/create/" class="nav-link">Criar tarefa</a>

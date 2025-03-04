@@ -29,9 +29,11 @@
 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
+                    <i class="bi bi-list-check"></i>
                     <a href="{% url 'tasks' %}" class="nav-link">Tarefas pendentes</a>
                 </li>
                 <li class="nav-item">
+                    <i class="bi bi-check-circle"></i>
                     <a href="{% url 'tasks_completed' %}" class="nav-link">Tarefas concluídas</a>
                 </li> 
                 <li class="nav-item">

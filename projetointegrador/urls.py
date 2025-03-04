@@ -31,6 +31,7 @@ urlpatterns = [
     path('tasks/<int:task_id>/delete', views.delete_task,name='delete_task'),  
     path('logout/', views.signout,name='logout'),
     path('signin/', views.signin,name='signin'),
+    path('about/', views.about,name='about'),
     path('favicon.ico', RedirectView.as_view(url='https://www.djangoproject.com/favicon.ico', permanent=True))
     
 ]
